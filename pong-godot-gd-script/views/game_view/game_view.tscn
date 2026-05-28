@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://b211pq4q341y5"]
+
+[ext_resource type="Script" uid="uid://cy52tcls0dvnv" path="res://core/controllers/game_view_controller.gd" id="1_hb84f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odqsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb84f"]
+
+[node name="GameView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hb84f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arena" type="Node2D" parent="."]
+
+[node name="Walls" type="Node2D" parent="Arena"]
+
+[node name="WallLeft" type="StaticBody2D" parent="Arena/Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Walls/WallLeft"]
+position = Vector2(3, 274)
+scale = Vector2(1, 50)
+shape = SubResource("RectangleShape2D_odqsf")
+
+[node name="WallRight" type="StaticBody2D" parent="Arena/Walls"]
+position = Vector2(32, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Walls/WallRight"]
+position = Vector2(1119, 300)
+scale = Vector2(1, 50)
+shape = SubResource("RectangleShape2D_odqsf")
+
+[node name="ScoreZone" type="Node2D" parent="Arena"]
+
+[node name="ScoreTop" type="Area2D" parent="Arena/ScoreZone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/ScoreZone/ScoreTop"]
+position = Vector2(624, 0)
+scale = Vector2(100, 1)
+shape = SubResource("RectangleShape2D_hb84f")
+
+[node name="ScoreBottom" type="Area2D" parent="Arena/ScoreZone"]
+position = Vector2(0, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/ScoreZone/ScoreBottom"]
+position = Vector2(638, 611)
+scale = Vector2(100, 1)
+shape = SubResource("RectangleShape2D_hb84f")
