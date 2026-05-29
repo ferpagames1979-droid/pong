@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779994209
+::res://::1780077078
 icon.svg::CompressedTexture2D::6926025743303721828::1779964613::1779964629::1::::<><><>0<>0<>d079c6477b3d6ebeef5b1bd54a9584b2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1779980355
 ::res://assets/audio/::1779980321
@@ -9,11 +9,15 @@ icon.svg::CompressedTexture2D::6926025743303721828::1779964613::1779964629::1:::
 ::res://assets/sprites/::1779980334
 ::res://assets/themes/::1779980355
 ::res://core/::1779980283
-::res://core/controllers/::1779980207
+::res://core/controllers/::1780078357
+game_view_controller.gd::GDScript::6520978359100597707::1780078357::0::1::::<>Control<><>0<>0<><>::
 ::res://core/interfaces/::1779980263
-::res://core/managers/::1779980250
-::res://core/models/::1779980197
+::res://core/managers/::1780078344
+PrintLog.gd::GDScript::6316860314335875615::1780079155::0::1::::<>Node<><>0<>0<><>::
+::res://core/models/::1780077754
 ::res://core/services/::1779980219
 ::res://core/signal_bus/::1779980283
-::res://core/utils/::1779980275
-::res://views/::1779992284
+::res://core/utils/::1780074266
+::res://views/::1780077793
+::res://views/game_view/::1780078764
+game_view.tscn::PackedScene::4336799598184516382::1780079155::0::1::::<><><>0<>0<><>::

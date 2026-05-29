@@ -1,8 +1,8 @@
+ColorRect
 CollisionShape2D
 Area2D
 Node2D
 StaticBody2D
 HSeparator
-ColorRect
 Line2D
 TextureRect

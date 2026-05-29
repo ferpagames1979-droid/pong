@@ -1,2 +1,4 @@
 res://core/controllers
+res://views/ball_view
+res://core/managers
 res://views/game_view

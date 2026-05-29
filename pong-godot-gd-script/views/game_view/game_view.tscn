@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b211pq4q341y5"]
+[gd_scene load_steps=5 format=3 uid="uid://b211pq4q341y5"]
 
 [ext_resource type="Script" uid="uid://cy52tcls0dvnv" path="res://core/controllers/game_view_controller.gd" id="1_hb84f"]
+[ext_resource type="PackedScene" uid="uid://x47u5t8bawhd" path="res://views/ball_view/ball_view.tscn" id="2_vbs4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odqsf"]
 
@@ -70,3 +71,7 @@ position = Vector2(0, 36)
 position = Vector2(638, 611)
 scale = Vector2(100, 1)
 shape = SubResource("RectangleShape2D_hb84f")
+
+[node name="BallView" parent="." instance=ExtResource("2_vbs4l")]
+unique_name_in_owner = true
+position = Vector2(529, 245)
