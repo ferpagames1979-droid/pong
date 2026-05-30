@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b211pq4q341y5"]
+[gd_scene load_steps=6 format=3 uid="uid://b211pq4q341y5"]
 
 [ext_resource type="Script" uid="uid://cy52tcls0dvnv" path="res://core/controllers/game_view_controller.gd" id="1_hb84f"]
 [ext_resource type="PackedScene" uid="uid://x47u5t8bawhd" path="res://views/ball_view/ball_view.tscn" id="2_vbs4l"]
+[ext_resource type="PackedScene" uid="uid://bja88tmemqqk3" path="res://views/paddle_player_view/paddle_player_view.tscn" id="3_wvyay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odqsf"]
 
@@ -75,3 +76,6 @@ shape = SubResource("RectangleShape2D_hb84f")
 [node name="BallView" parent="." instance=ExtResource("2_vbs4l")]
 unique_name_in_owner = true
 position = Vector2(529, 245)
+
+[node name="PaddlePlayerView" parent="." instance=ExtResource("3_wvyay")]
+position = Vector2(498, 602)

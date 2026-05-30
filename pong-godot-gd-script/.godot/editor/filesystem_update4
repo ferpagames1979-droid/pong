@@ -8,3 +8,8 @@ res://core/utils/ReturnClassName.gd
 res://core/models/BallModel.gd
 res://core/managers/PrintLogManager.gd
 res://core/models/ball_model.gd
+res://views/paddle_player_view/paddle_player_view.tscn
+res://core/models/paddle_model.gd
+res://core/controllers/paddle_base_controller.gd
+res://core/controllers/paddle_player_view.gd
+res://core/controllers/paddle_player_view_controller.gd
