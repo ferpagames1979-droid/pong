@@ -18,6 +18,8 @@ var direction: Vector2 = Vector2.ZERO
 ## Whether the ball is currently moving
 var is_active: bool = false
 
+
+
 func reset() -> void:
 	self.direction = Vector2.ZERO
 	self.is_active = false
