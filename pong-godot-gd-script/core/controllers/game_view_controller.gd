@@ -20,6 +20,8 @@ func _ready() -> void:
 	_setup_ai()
 	ball_view.launch()
 	
+## Configures IA before game starts
+## Injects ball reference and sets difficulty
 func _setup_ai() -> void:
 	paddle_ai_view.set_ball(ball_view)
 	paddle_ai_view.set_difficulty(PaddleModel.AIDifficulty.EASY)
