@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://driyxcuwtcypf" path="res://views/paddl_ai_view/paddle_ai_view.tscn" id="4_msdcn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odqsf"]
+size = Vector2(67, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hb84f"]
 
@@ -45,7 +46,7 @@ grow_vertical = 2
 [node name="WallLeft" type="StaticBody2D" parent="Arena/Walls" groups=["walls"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Walls/WallLeft"]
-position = Vector2(3, 274)
+position = Vector2(28, 277)
 scale = Vector2(1, 50)
 shape = SubResource("RectangleShape2D_odqsf")
 
@@ -53,7 +54,7 @@ shape = SubResource("RectangleShape2D_odqsf")
 position = Vector2(32, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Walls/WallRight"]
-position = Vector2(1119, 300)
+position = Vector2(1098.5, 300)
 scale = Vector2(1, 50)
 shape = SubResource("RectangleShape2D_odqsf")
 
@@ -76,7 +77,7 @@ shape = SubResource("RectangleShape2D_hb84f")
 
 [node name="BallView" parent="." instance=ExtResource("2_vbs4l")]
 unique_name_in_owner = true
-position = Vector2(39, 29)
+position = Vector2(105, 43)
 
 [node name="PaddlePlayerView" parent="." instance=ExtResource("3_wvyay")]
 unique_name_in_owner = true

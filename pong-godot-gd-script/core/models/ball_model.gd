@@ -21,7 +21,7 @@ var is_active: bool = false
 
 
 func reset() -> void:
-	self.direction = Vector2.ZERO
+	self.direction = Vector2(105, 43)
 	self.is_active = false
 	
 	

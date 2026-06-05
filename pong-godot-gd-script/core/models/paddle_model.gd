@@ -24,7 +24,7 @@ var limit_left: float = 60.0
 
 ## Right boundary limit in pixels
 ## Considers paddle half-width (1152px - 60px = 1092px)
-var limit_right: float = 1092.0
+var limit_right: float = 960.0
 
 ## IA SESSION
 enum AIDifficulty { EASY, MEDIUM, HARD }
