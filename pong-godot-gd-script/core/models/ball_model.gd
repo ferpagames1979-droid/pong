@@ -13,7 +13,7 @@ const CLASS_NAME_LOG = "BallModel"
 var speed: float = 300.0
 
 ## Current normalized movement direction
-var direction: Vector2 = Vector2.ZERO
+var direction: Vector2 = Vector2(576, 324)
 
 ## Whether the ball is currently moving
 var is_active: bool = false
@@ -21,7 +21,10 @@ var is_active: bool = false
 
 
 func reset() -> void:
-	self.direction = Vector2(105, 43)
+	self.direction = Vector2(576, 324)
 	self.is_active = false
+	
+func get_ball_position() -> Vector2:
+	return direction
 	
 	
