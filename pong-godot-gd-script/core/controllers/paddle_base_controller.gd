@@ -18,6 +18,10 @@ extends StaticBody2D
 
 const CLASS_NAME_LOG: String = "PaddleBaseController"
 
+## Paddle ID constants — used across entire architecture
+const PLAYER_ID : int = 1
+const IA_ID : int = 2
+
 ## Shared data model — used by all paddle subclasses
 var model: PaddleModel = PaddleModel.new()
 

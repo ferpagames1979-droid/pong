@@ -1,6 +1,9 @@
-res://views/game_view/game_view.tscn
-res://core/models/ball_model.gd
+res://views/ball_view/ball_view.tscn
+res://core/signal_bus/signal_bus.gd
+res://core/controllers/ball_view_controller.gd
 res://core/models/paddle_model.gd
-res://views/paddl_ai_view/paddle_ai_view.tscn
+res://core/controllers/paddle_base_controller.gd
+res://views/game_view/game_view.tscn
 res://core/controllers/paddle_ai_view_controller.gd
+res://core/controllers/paddle_player_view_controller.gd
 res://core/controllers/game_view_controller.gd

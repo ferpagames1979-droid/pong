@@ -19,6 +19,7 @@ const CLASS_NAME_LOG_CHILD: String = "PaddlePlayerViewController"
 
 ## Overrides _on_ready() hook — logs player paddle initialization.
 func _on_ready() -> void:
+	model.id = PLAYER_ID
 	PrintLogManager.printlog(CLASS_NAME_LOG_CHILD,
 		PrintLogManager.LogType.INFO,
 		CLASS_NAME_LOG_CHILD + " _on_ready()")

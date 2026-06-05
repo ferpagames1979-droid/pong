@@ -21,6 +21,7 @@ const CLASS_NAME_LOG_CHILD = "PaddleAIViewController"
 var ball : BallViewController = null
 
 func _ready() -> void:
+	model.id = IA_ID
 	PrintLogManager.printlog(CLASS_NAME_LOG_CHILD, 
 							 PrintLogManager.LogType.INFO,
 							" execute _ready()")

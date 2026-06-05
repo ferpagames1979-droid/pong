@@ -42,14 +42,14 @@ grow_vertical = 2
 
 [node name="Walls" type="Node2D" parent="Arena"]
 
-[node name="WallLeft" type="StaticBody2D" parent="Arena/Walls"]
+[node name="WallLeft" type="StaticBody2D" parent="Arena/Walls" groups=["walls"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Walls/WallLeft"]
 position = Vector2(3, 274)
 scale = Vector2(1, 50)
 shape = SubResource("RectangleShape2D_odqsf")
 
-[node name="WallRight" type="StaticBody2D" parent="Arena/Walls"]
+[node name="WallRight" type="StaticBody2D" parent="Arena/Walls" groups=["walls"]]
 position = Vector2(32, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/Walls/WallRight"]
@@ -76,13 +76,12 @@ shape = SubResource("RectangleShape2D_hb84f")
 
 [node name="BallView" parent="." instance=ExtResource("2_vbs4l")]
 unique_name_in_owner = true
-position = Vector2(522, 42)
+position = Vector2(39, 29)
 
 [node name="PaddlePlayerView" parent="." instance=ExtResource("3_wvyay")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(498, 602)
 
 [node name="PaddleAIView" parent="." instance=ExtResource("4_msdcn")]
 unique_name_in_owner = true
-position = Vector2(113, 556)
+position = Vector2(487, 35)

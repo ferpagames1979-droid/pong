@@ -1,3 +1,4 @@
+res://core/signal_bus
 res://core/controllers
 res://views/paddle_player_view
 res://views/ball_view

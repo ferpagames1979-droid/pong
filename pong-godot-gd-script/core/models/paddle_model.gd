@@ -11,6 +11,10 @@ extends Resource
 
 const CLASS_NAME_LOG: String = "PaddleModel"
 
+## Unique paddle id 
+## Player = 1 | IA = 2 | Undefined = 0
+var id : int = 0
+
 ## Paddle movement speed in pixels per second
 var speed: float = 400.0
 
