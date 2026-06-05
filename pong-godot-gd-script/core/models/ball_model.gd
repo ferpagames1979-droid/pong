@@ -13,18 +13,20 @@ const CLASS_NAME_LOG = "BallModel"
 var speed: float = 300.0
 
 ## Current normalized movement direction
-var direction: Vector2 = Vector2(576, 324)
+var direction: Vector2 = Vector2.ZERO
+
+## Initial spawn position — center of screen
+var initial_position: Vector2 = Vector2(576, 324)
 
 ## Whether the ball is currently moving
 var is_active: bool = false
 
 
-
+# reset ball 
 func reset() -> void:
-	self.direction = Vector2(576, 324)
+	self.direction = Vector2.ZERO
 	self.is_active = false
 	
-func get_ball_position() -> Vector2:
-	return direction
+
 	
 	

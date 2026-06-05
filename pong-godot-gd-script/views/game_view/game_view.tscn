@@ -1,9 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://b211pq4q341y5"]
+[gd_scene load_steps=8 format=3 uid="uid://b211pq4q341y5"]
 
 [ext_resource type="Script" uid="uid://cy52tcls0dvnv" path="res://core/controllers/game_view_controller.gd" id="1_hb84f"]
 [ext_resource type="PackedScene" uid="uid://x47u5t8bawhd" path="res://views/ball_view/ball_view.tscn" id="2_vbs4l"]
 [ext_resource type="PackedScene" uid="uid://bja88tmemqqk3" path="res://views/paddle_player_view/paddle_player_view.tscn" id="3_wvyay"]
 [ext_resource type="PackedScene" uid="uid://driyxcuwtcypf" path="res://views/paddl_ai_view/paddle_ai_view.tscn" id="4_msdcn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msdcn"]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odqsf"]
 size = Vector2(67, 20)
@@ -38,6 +44,7 @@ offset_top = -2.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_msdcn")
 
 [node name="Arena" type="Node2D" parent="."]
 

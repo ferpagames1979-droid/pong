@@ -42,7 +42,7 @@ func launch() -> void:
 ## Resets ball to center position
 func reset_ball() -> void:
 	model.reset()
-	position = model.get_ball_position()
+	position = model.initial_position
 	PrintLogManager.printlog(CLASS_NAME_LOG, PrintLogManager.LogType.INFO, "Ball is reset")
 	
 ## Returns a random normalize direction
