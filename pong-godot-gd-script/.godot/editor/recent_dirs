@@ -1,5 +1,6 @@
-res://core/signal_bus
 res://core/controllers
+res://views/score_view
+res://core/signal_bus
 res://views/paddle_player_view
 res://views/ball_view
 res://core/managers

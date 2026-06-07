@@ -11,6 +11,7 @@ const CLASS_NAME_LOG = "GameView"
 @onready var ball_view: BallViewController = %BallView
 @onready var paddle_ai_view: PaddleAIViewController = %PaddleAIView
 @onready var paddle_player_view: PaddlePlayerViewController = %PaddlePlayerView
+@onready var score_view: ScoreViewController = %ScoreView
 
 	
 func _ready() -> void:
@@ -27,6 +28,7 @@ func _connect_signals() -> void:
 	SignalBus.BallViewControllerSignal_hit_wall.connect(_on_ball_hit_wall)
 	SignalBus.BallViewControllerSignal_out_top.connect(_on_ball_out_top)
 	SignalBus.BallViewControllerSignal_out_bottom.connect(_on_ball_out_bottom)
+	SignalBus.GameViewControllerSignal_game_over.connect(_on_game_over)
 	
 ## Configures IA before game starts
 ## Injects ball reference and sets difficulty
@@ -55,6 +57,7 @@ func _on_ball_out_top() -> void:
 	PrintLogManager.printlog(CLASS_NAME_LOG, 
 							 PrintLogManager.LogType.INFO, 
 							"OUT TOP - player score")
+	score_view.register_points(PaddleBaseController.PLAYER_ID)
 	_reset_round(PaddleBaseController.PLAYER_ID)
 	
 ## Called when ball exits bottom — IA scores
@@ -62,6 +65,7 @@ func _on_ball_out_bottom() -> void:
 	PrintLogManager.printlog(CLASS_NAME_LOG, 
 							 PrintLogManager.LogType.INFO, 
 							"OUT BOTTOM - IA score")
+	score_view.register_points(PaddleBaseController.IA_ID)
 	_reset_round(PaddleBaseController.IA_ID)							
 
 ## Resets round after point — waits 1s then relaunches ball
@@ -74,5 +78,12 @@ func _reset_round(score_id : int) -> void:
 							 PrintLogManager.LogType.INFO, 
 							"Round Reset - scorer id: " + str(score_id))
 	
+## Called when game is over — stops ball and logs winner
+## [param winner_id] - 1 = player | 2 = IA
+func _on_game_over(winner_id : int) -> void:
+	ball_view.reset_ball()
+	PrintLogManager.printlog(CLASS_NAME_LOG, 
+							 PrintLogManager.LogType.INFO, 
+							"GAME OVER - WINNER = " + str(winner_id))
 	
 	
