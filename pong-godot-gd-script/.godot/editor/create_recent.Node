@@ -1,3 +1,9 @@
+VSeparator
+VBoxContainer
+Label
+HBoxContainer
+MarginContainer
+CanvasLayer
 VisibleOnScreenEnabler2D
 ColorRect
 CollisionShape2D

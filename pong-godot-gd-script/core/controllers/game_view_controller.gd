@@ -12,7 +12,6 @@ const CLASS_NAME_LOG = "GameView"
 @onready var paddle_ai_view: PaddleAIViewController = %PaddleAIView
 @onready var paddle_player_view: PaddlePlayerViewController = %PaddlePlayerView
 @onready var score_view: ScoreViewController = %ScoreView
-
 	
 func _ready() -> void:
 	PrintLogManager.printlog(CLASS_NAME_LOG, 
@@ -57,7 +56,7 @@ func _on_ball_out_top() -> void:
 	PrintLogManager.printlog(CLASS_NAME_LOG, 
 							 PrintLogManager.LogType.INFO, 
 							"OUT TOP - player score")
-	score_view.register_points(PaddleBaseController.PLAYER_ID)
+	score_view.register_point(PaddleBaseController.PLAYER_ID)
 	_reset_round(PaddleBaseController.PLAYER_ID)
 	
 ## Called when ball exits bottom — IA scores
@@ -65,7 +64,7 @@ func _on_ball_out_bottom() -> void:
 	PrintLogManager.printlog(CLASS_NAME_LOG, 
 							 PrintLogManager.LogType.INFO, 
 							"OUT BOTTOM - IA score")
-	score_view.register_points(PaddleBaseController.IA_ID)
+	score_view.register_point(PaddleBaseController.IA_ID)
 	_reset_round(PaddleBaseController.IA_ID)							
 
 ## Resets round after point — waits 1s then relaunches ball

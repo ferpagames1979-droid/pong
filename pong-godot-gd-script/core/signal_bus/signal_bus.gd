@@ -21,7 +21,7 @@ signal GameViewControllerSignal_round_reset
 signal GameViewControllerSignal_game_over(winner_id : int)
 
 ## SESSION SIGNALS - ScoreViewController
-signal GameViewControllerSignal_point_scored(paddle_id : int, score : int)
+signal ScoreViewControllerSignal_point_scored(paddle_id : int, score : int)
 
 ## SESSION SIGNALS - LeveManager 
 signal LevelManagerSignal_level_changed(new_level : int)

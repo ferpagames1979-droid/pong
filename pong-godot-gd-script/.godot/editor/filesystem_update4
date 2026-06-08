@@ -3,3 +3,7 @@ res://views/score_view/score_view.tscn
 res://core/controllers/score_view_controller.gd
 res://views/game_view/game_view.tscn
 res://core/controllers/game_view_controller.gd
+res://core/models/hud_score_model.gd
+res://views/hud_score_view/hud_score_view.tscn
+res://core/controllers/hud_score_view_controller.gd
+res://core/signal_bus/signal_bus.gd

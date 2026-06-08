@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b211pq4q341y5"]
+[gd_scene load_steps=10 format=3 uid="uid://b211pq4q341y5"]
 
 [ext_resource type="Script" uid="uid://cy52tcls0dvnv" path="res://core/controllers/game_view_controller.gd" id="1_hb84f"]
 [ext_resource type="PackedScene" uid="uid://x47u5t8bawhd" path="res://views/ball_view/ball_view.tscn" id="2_vbs4l"]
 [ext_resource type="PackedScene" uid="uid://bja88tmemqqk3" path="res://views/paddle_player_view/paddle_player_view.tscn" id="3_wvyay"]
 [ext_resource type="PackedScene" uid="uid://driyxcuwtcypf" path="res://views/paddl_ai_view/paddle_ai_view.tscn" id="4_msdcn"]
 [ext_resource type="PackedScene" uid="uid://duv7hqbief84d" path="res://views/score_view/score_view.tscn" id="5_8jufc"]
+[ext_resource type="PackedScene" uid="uid://b64kiqef7snix" path="res://views/hud_score_view/hud_score_view.tscn" id="6_350hh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msdcn"]
 border_width_left = 3
@@ -96,4 +97,7 @@ unique_name_in_owner = true
 position = Vector2(487, 35)
 
 [node name="ScoreView" parent="." instance=ExtResource("5_8jufc")]
+unique_name_in_owner = true
+
+[node name="HudScoreView" parent="." instance=ExtResource("6_350hh")]
 unique_name_in_owner = true
