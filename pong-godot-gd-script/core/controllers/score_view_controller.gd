@@ -85,6 +85,10 @@ func set_points_to_win(points: int) -> void:
 ## Resets all scores — called on new game or level up
 func reset_scores() -> void:
 	model.reset()
+	SignalBus.ScoreViewControllerSignal_point_scored.emit(
+		PaddleBaseController.PLAYER_ID, 0)
+	SignalBus.ScoreViewControllerSignal_point_scored.emit(
+		PaddleBaseController.IA_ID, 0)
 	PrintLogManager.printlog(CLASS_NAME_LOG,
 		PrintLogManager.LogType.INFO,
-		"Scores reset")
+		"reset_scores() EXECUTED")

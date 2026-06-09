@@ -86,7 +86,7 @@ shape = SubResource("RectangleShape2D_hb84f")
 
 [node name="BallView" parent="." instance=ExtResource("2_vbs4l")]
 unique_name_in_owner = true
-position = Vector2(105, 43)
+position = Vector2(169, 118)
 
 [node name="PaddlePlayerView" parent="." instance=ExtResource("3_wvyay")]
 unique_name_in_owner = true
