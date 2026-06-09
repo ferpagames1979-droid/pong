@@ -3,3 +3,5 @@ res://core/controllers/game_view_controller.gd
 res://core/managers/LevelManager.gd
 res://core/controllers/score_view_controller.gd
 res://core/models/level_config_model.gd
+res://core/managers/SoundManager.gd
+res://core/controllers/ball_view_controller.gd

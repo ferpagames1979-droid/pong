@@ -49,6 +49,7 @@ func _connect_signals() -> void:
 ## Difficulty is applied later via _apply_config()
 func _setup_ai() -> void:
 	paddle_ai_view.set_ball(ball_view)
+	ball_view.set_paddles(paddle_player_view, paddle_ai_view) 
 	PrintLogManager.printlog(CLASS_NAME_LOG,
 		PrintLogManager.LogType.INFO,
 		CLASS_NAME_LOG + " setup_ai executado")
