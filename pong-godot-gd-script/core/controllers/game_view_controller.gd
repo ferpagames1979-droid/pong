@@ -165,4 +165,9 @@ func _on_game_over(winner_id: int) -> void:
 		PrintLogManager.LogType.INFO,
 		"GAME OVER - WINNER = " + str(winner_id))
 	await get_tree().create_timer(2).timeout
-	_start_next_level()
+	if winner_id == PaddleBaseController.PLAYER_ID:
+		_start_next_level()
+	else:
+		SceneManager.go_to_game_over(winner_id)
+	
+	

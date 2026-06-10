@@ -1,5 +1,7 @@
+res://views/main_menu_view
 res://core/managers
 res://core/controllers
+res://views/loading_screen_view
 res://views/hud_score_view
 res://views/score_view
 res://core/signal_bus

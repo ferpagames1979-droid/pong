@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0ic3r5sxrfxi"]
+
+[ext_resource type="Script" uid="uid://dgixaxbpila5h" path="res://core/controllers/loading_screen_view_controller.gd" id="1_2l62h"]
+[ext_resource type="Texture2D" uid="uid://d1y2t3s5pyjnv" path="res://assets/textures/pong_background.png" id="1_a4xlr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l62h"]
+bg_color = Color(0.16685283, 0.16685286, 0.16685274, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anofm"]
+bg_color = Color(0.6, 1, 0.6, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.24705882, 0.8, 1)
+
+[node name="LoadingScreenView" type="CanvasLayer"]
+script = ExtResource("1_2l62h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a4xlr")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_2l62h")
+theme_override_styles/fill = SubResource("StyleBoxFlat_anofm")
+
+[node name="LabelStatus" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Loading..."
+horizontal_alignment = 1

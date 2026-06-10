@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PongGodotGDScript"
-run/main_scene="uid://b211pq4q341y5"
+run/main_scene="uid://ck0a60gp85gai"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -21,6 +21,7 @@ PrintLogManager="*res://core/managers/PrintLogManager.gd"
 SignalBus="*res://core/signal_bus/signal_bus.gd"
 LevelManager="*res://core/managers/LevelManager.gd"
 SoundManager="*res://core/managers/SoundManager.gd"
+SceneManager="*res://core/managers/SceneManager.gd"
 
 [display]
 
