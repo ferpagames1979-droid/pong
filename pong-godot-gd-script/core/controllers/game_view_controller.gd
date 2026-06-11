@@ -58,10 +58,10 @@ func _setup_ai() -> void:
 ## Starts current level — generates config, applies it,
 ## emits round_reset to clear HUD and launches ball.
 func _start_level() -> void:
-	var config: LevelConfigModel = LevelManager.generate_config(
-		LevelManager.get_current_level())
+	var config = LevelManager.generate_config(LevelManager.get_current_level())
 	_apply_config(config)
 	_game_active = true
+	SignalBus.LevelManagerSignal_level_changed.emit(LevelManager.get_current_level()) 
 	SignalBus.GameViewControllerSignal_round_reset.emit()
 	ball_view.launch()
 	PrintLogManager.printlog(CLASS_NAME_LOG,
@@ -160,14 +160,15 @@ func _reset_round(score_id: int) -> void:
 ## [param winner_id] - 1 = player | 2 = IA
 func _on_game_over(winner_id: int) -> void:
 	_game_active = false
-	ball_view.reset_ball()
+	ball_view.reset_ball()	
 	PrintLogManager.printlog(CLASS_NAME_LOG,
 		PrintLogManager.LogType.INFO,
 		"GAME OVER - WINNER = " + str(winner_id))
 	await get_tree().create_timer(2).timeout
+	SaveManager.save_level(LevelManager.get_current_level())
 	if winner_id == PaddleBaseController.PLAYER_ID:
 		_start_next_level()
-	else:
+	else:		
 		SceneManager.go_to_game_over(winner_id)
 	
 	

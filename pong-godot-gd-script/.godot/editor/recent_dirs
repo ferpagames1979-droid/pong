@@ -1,5 +1,5 @@
-res://views/main_menu_view
 res://core/managers
+res://views/main_menu_view
 res://core/controllers
 res://views/loading_screen_view
 res://views/hud_score_view
